@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
-import { Colors, FontSize } from '../../config/style'
+import * as Styles from '../../config/styles'
 
 export default class MainFeature extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.top}></View>
+        <View style={styles.bot}></View>
         <View style={styles.boxContainer}>
           <View style={styles.col}>
             <View style={styles.box}></View>
@@ -26,6 +27,7 @@ export default class MainFeature extends Component {
             <Text style={styles.text}>Quét mã</Text>
           </View>
         </View>
+
       </View>
     )
   }
@@ -38,29 +40,34 @@ const styles = StyleSheet.create({
   },
   top: {
     height: "50%",
-    backgroundColor: Colors.green,
+    backgroundColor: Styles.Colors.green,
+  },
+  bot: {
+    height: "50%",
+    backgroundColor: Styles.Colors.white,
   },
   boxContainer: {
-    top: -50,
+    top: -100,
     flexDirection: 'row',
     marginVertical: 2,
     marginHorizontal: 8,
   },
   col: {
-    height: 100,
     flex: 1/4,
     alignItems: 'center',
     marginHorizontal: 8,
-    borderColor: Colors.green,
-    backgroundColor: 'red',
   },
   box: {
-    height: 55,
+    width: "100%",
+    height: 65,
+    ...Styles.BoxBorder,
+    ...Styles.BoxShadow,
+    backgroundColor: Styles.Colors.white,
   },
   text: {
-    marginTop: 20,
-    fontSize: 12,
-    color: Colors.black,
+    marginTop: 10,
+    fontSize: Styles.FontSize.title,
+    color: Styles.Colors.black,
     fontWeight: '400',
   }
 })

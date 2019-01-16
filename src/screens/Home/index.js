@@ -6,14 +6,18 @@ import {
 import Header from '../../components/Header/Home.component'
 
 import MainFeature from './MainFeature'
+import CheckLogin from './CheckLogin';
+import Services from './Services';
 
 export default class Home extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#449D47'}}>
         <Header />
         <ScrollView>
           <MainFeature />
+          <CheckLogin />
+          <Services />
           <View style={styles.container}>
             <Text style={styles.welcome}> Welcome to React Native! </Text>
           </View>
@@ -23,11 +27,6 @@ export default class Home extends Component {
   }
 }
 const styles = StyleSheet.create({
-  checkLogin: {
-    height: 83,
-    borderBottomWidth: 3,
-    borderBottomColor: "#f4f3f9",
-  },
   container: {
     flex: 1,
     justifyContent: 'center',

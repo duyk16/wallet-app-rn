@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import RouteBottom from './Route.bottom'
+import Route from './Route'
 
 export default class App extends Component {
   render() {
     return (
-      <RouteBottom />
+      <Route />
     );
   }
 }
