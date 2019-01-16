@@ -15,7 +15,7 @@ export default class Services extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    height: 85,
+    height: 1005,
     flexDirection: 'row',
     borderBottomWidth: 3,
     borderBottomColor: "#f4f3f9",

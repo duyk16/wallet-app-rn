@@ -10,7 +10,7 @@ export default class Service extends Component {
     return (
       <TouchableOpacity>
         <View>
-
+          
         </View>
       </TouchableOpacity>
     )

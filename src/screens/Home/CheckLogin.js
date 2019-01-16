@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
+import AntIcon from 'react-native-vector-icons/AntDesign'
 
 import * as Styles from '../../config/styles'
 
@@ -8,7 +9,7 @@ export default class CheckLogin extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.leftBox}>
-          <View style={styles.imgTest}></View>
+          <AntIcon name="book" color={Styles.Colors.pink} size={45}/>
         </View>
         <View style={styles.rightBox}>
           <Text style={Styles.TextTitle}>Bạn chưa đăng nhập</Text>
@@ -37,11 +38,5 @@ const styles = StyleSheet.create({
   rightBox: {
     flex: 4/5,
     justifyContent: 'center',
-  },
-
-  imgTest: {
-    width: 50,
-    height: 50,
-    backgroundColor: Styles.Colors.gray,
   },
 })

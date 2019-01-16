@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
+import AntIcon from 'react-native-vector-icons/AntDesign'
+import EntypoIcon from 'react-native-vector-icons/Entypo'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 
 import * as Styles from '../../config/styles'
 
@@ -11,20 +15,34 @@ export default class MainFeature extends Component {
         <View style={styles.bot}></View>
         <View style={styles.boxContainer}>
           <View style={styles.col}>
-            <View style={styles.box}></View>
+            <View style={styles.box}>
+              <MaterialCommunityIcons 
+                name = "barcode-scan"
+                color={Styles.Colors.green} size={35}                 
+              />
+
+            </View>
             <Text style={styles.text}>Quét mã</Text>
           </View>
           <View style={styles.col}>
-            <View style={styles.box}></View>
-            <Text style={styles.text}>Quét mã</Text>
+            <View style={styles.box}>
+              <MaterialCommunityIcons name="gamepad" color={Styles.Colors.green} size={35} />
+
+            </View>
+            <Text style={styles.text}>TT Game</Text>
           </View>
           <View style={styles.col}>
-            <View style={styles.box}></View>
-            <Text style={styles.text}>Quét mã</Text>
+            <View style={styles.box}>
+              <AntIcon name="qrcode" color={Styles.Colors.green} size={35} />
+            </View>
+            <Text style={styles.text}>Mã QR</Text>
           </View>
           <View style={styles.col}>
-            <View style={styles.box}></View>
-            <Text style={styles.text}>Quét mã</Text>
+            <View style={styles.box}>
+              <SimpleLineIcons name="briefcase" color={Styles.Colors.green} size={33} />
+
+            </View>
+            <Text style={styles.text}>Túi đồ</Text>
           </View>
         </View>
 
@@ -58,10 +76,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   box: {
-    width: "100%",
-    height: 65,
+    ...Styles.BoxCenter,
     ...Styles.BoxBorder,
     ...Styles.BoxShadow,
+    width: '100%',
+    height: 63,
     backgroundColor: Styles.Colors.white,
   },
   text: {

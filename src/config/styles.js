@@ -1,12 +1,10 @@
 export const Colors = {
   primary: '#e63c3c',
-  primaryDark: '#ac0015',
-  primaryLight: '#ff7267',
   black: '#000000',
   white: '#ffffff',
   gray: '#ebebeb',
-  sazerac: '#FFF6E5',
-  green: '#449D47'
+  green: '#449D47',
+  pink: '#f72d53',
 };
 
 export const FontSize = {
@@ -15,7 +13,10 @@ export const FontSize = {
   header: 14,
   display1: 12,
 }
-
+export const BoxCenter = {
+  justifyContent: 'center',
+  alignItems: 'center',
+}
 export const BoxShadow = {
   shadowColor: '#333',
   shadowOffset: {width: 0, height: 0},
