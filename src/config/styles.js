@@ -4,14 +4,24 @@ export const Colors = {
   white: '#ffffff',
   gray: '#ebebeb',
   green: '#449D47',
+  green2: '#3f9242',
+  yellow: '#ffff00',
   pink: '#f72d53',
+  violet: '#5752cf'
 };
 
 export const FontSize = {
+  small: 8,
   normal: 10,
-  title: 11,
+  title: 12,
   header: 14,
-  display1: 12,
+  display1: 11,
+  display2: 13,
+}
+export const ViewRow = {
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 export const BoxCenter = {
   justifyContent: 'center',
@@ -34,7 +44,7 @@ export const TextTitle = {
   fontSize: FontSize.title,
   fontWeight: '400',
   lineHeight: 14,
-  color: '#000'
+  color: '#1a1a1a'
 }
 
 export const TextNormal = {

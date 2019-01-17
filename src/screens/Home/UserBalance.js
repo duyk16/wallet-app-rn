@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 
-import AntIcon from 'react-native-vector-icons/AntDesign'
+import Entypo from 'react-native-vector-icons/Entypo'
+
 import * as Styles from '../../config/styles'
 
 export default class CheckLogin extends Component {
@@ -9,19 +10,18 @@ export default class CheckLogin extends Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity 
-          style={styles.leftBox}
+          style={styles.leftBox} 
           activeOpacity={0.7}
-          onPress={this.props.logout}
+          onPress={this.props.login}
           >
-          <AntIcon 
-            name="book" 
-            color={Styles.Colors.pink} 
-            size={45}
-            />
+          <Entypo 
+            name="credit" 
+            color={Styles.Colors.violet} 
+            size={45}/>
         </TouchableOpacity>
         <View style={styles.rightBox}>
-          <Text style={Styles.TextTitle}>Bạn chưa đăng nhập</Text>
-          <Text style={Styles.TextNormal}>Mời bạn đăng nhập để sử dụng đầy đủ tính năng của ứng dụng. Xin vui lòng bấm vào đây!</Text>          
+          <Text style={Styles.TextTitle}>Tài khoản chính của bạn hết Gem</Text>
+          <Text style={Styles.TextNormal}>Bạn có muốn nạp thêm Gem và tài khoản chính không? Xin vui lòng bấm vào đây!</Text>          
         </View>
       </View>
     )

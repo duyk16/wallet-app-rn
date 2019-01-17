@@ -1,22 +1,41 @@
 import React, { Component } from 'react'
 import {
-  Text, View, StyleSheet, ScrollView
+  Text, View, StyleSheet, ScrollView, StatusBar
 } from 'react-native'
 
-import Header from '../../components/Header/Home.component'
+import Header from '../../components/Header/Home'
 
+import UserInfo from './UserInfo'
 import MainFeature from './MainFeature'
 import CheckLogin from './CheckLogin';
+import UserBalance from './UserBalance';
 import Services from './Services';
 
-export default class Home extends Component {
+export default class index extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      isLogin: false,
+    }
+
+    this.login = this.login.bind(this)
+  }
+  
+  login() {
+    this.setState({
+      isLogin: !this.state.isLogin
+    })
+  }
+
   render() {
     return (
       <View style={{flex: 1, backgroundColor: '#449D47'}}>
-        <Header />
+        <StatusBar barStyle="light-content" />        
+        <Header isLogin={this.state.isLogin} />
+        {this.state.isLogin && <UserInfo />}
         <ScrollView>
           <MainFeature />
-          <CheckLogin />
+          {this.state.isLogin ? <UserBalance login={this.login}/> : <CheckLogin logout={this.login}/>}
           <Services />
           <View style={styles.container}>
             <Text style={styles.welcome}> Welcome to React Native! </Text>

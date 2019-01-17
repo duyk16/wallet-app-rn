@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import AntIcon from 'react-native-vector-icons/AntDesign'
-import EntypoIcon from 'react-native-vector-icons/Entypo'
+
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Feather from 'react-native-vector-icons/Feather'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 
 import * as Styles from '../../config/styles'
 
@@ -18,29 +18,35 @@ export default class MainFeature extends Component {
             <View style={styles.box}>
               <MaterialCommunityIcons 
                 name = "barcode-scan"
-                color={Styles.Colors.green} size={35}                 
-              />
-
+                color={Styles.Colors.green} 
+                size={32} />
             </View>
             <Text style={styles.text}>Quét mã</Text>
           </View>
           <View style={styles.col}>
             <View style={styles.box}>
-              <MaterialCommunityIcons name="gamepad" color={Styles.Colors.green} size={35} />
-
+              <MaterialCommunityIcons 
+                name="gamepad"
+                color={Styles.Colors.green} 
+                size={32} />
             </View>
             <Text style={styles.text}>TT Game</Text>
           </View>
           <View style={styles.col}>
             <View style={styles.box}>
-              <AntIcon name="qrcode" color={Styles.Colors.green} size={35} />
+              <AntDesign
+                name="qrcode"
+                color={Styles.Colors.green}
+                size={32} />
             </View>
             <Text style={styles.text}>Mã QR</Text>
           </View>
           <View style={styles.col}>
             <View style={styles.box}>
-              <SimpleLineIcons name="briefcase" color={Styles.Colors.green} size={33} />
-
+              <Feather 
+                name="archive"
+                color={Styles.Colors.green}
+                size={32} />
             </View>
             <Text style={styles.text}>Túi đồ</Text>
           </View>
@@ -58,7 +64,6 @@ const styles = StyleSheet.create({
   },
   top: {
     height: "50%",
-    backgroundColor: Styles.Colors.green,
   },
   bot: {
     height: "50%",
@@ -81,6 +86,7 @@ const styles = StyleSheet.create({
     ...Styles.BoxShadow,
     width: '100%',
     height: 63,
+    paddingTop: 5,
     backgroundColor: Styles.Colors.white,
   },
   text: {
