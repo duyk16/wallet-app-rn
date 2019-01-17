@@ -5,7 +5,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 
 import * as Styles from '../../config/styles'
 
-export default class CheckLogin extends Component {
+export default class EmtyBalance extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -32,11 +32,10 @@ const styles = StyleSheet.create({
   container: {
     height: 85,
     flexDirection: 'row',
-    borderBottomWidth: 3,
-    borderBottomColor: "#f4f3f9",
     paddingHorizontal: 10,
     paddingVertical: 15,
     backgroundColor: Styles.Colors.white,
+    ...Styles.BoxBorderBottom,
   },
   leftBox: {
     flex: 1/5,

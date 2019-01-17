@@ -1,13 +1,19 @@
 export const Colors = {
-  primary: '#e63c3c',
   black: '#000000',
   white: '#ffffff',
   gray: '#ebebeb',
-  green: '#449D47',
-  green2: '#3f9242',
   yellow: '#ffff00',
   pink: '#f72d53',
-  violet: '#5752cf'
+  violet: '#5752cf',
+  green2: '#3f9242',
+  green: '#449D47',
+  greenBack: '#f4f9f4',
+  blue: '#2196f5',
+  blueBack: '#f2f9fe',
+  orange: '#ff5721',
+  orangeBack: '#fff5f2',
+  orange2: '#f5a623',
+  orangeBack2: '#fefaf2',
 };
 
 export const FontSize = {
@@ -33,13 +39,15 @@ export const BoxShadow = {
   shadowRadius: 3,
   shadowOpacity: 0.3,
 }
-
 export const BoxBorder = {
   borderRadius: 4,
   borderWidth: 1,
   borderColor: '#ebebeb',
 }
-
+export const BoxBorderBottom = {
+  borderBottomWidth: 3,
+  borderBottomColor: "#f4f3f9",
+}
 export const TextTitle = {
   fontSize: FontSize.title,
   fontWeight: '400',

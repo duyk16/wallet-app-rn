@@ -59,8 +59,7 @@ export default class MainFeature extends Component {
 const styles = StyleSheet.create({
   container: {
     height: 111,
-    borderBottomWidth: 3,
-    borderBottomColor: "#f4f3f9",
+    ...Styles.BoxBorderBottom,
   },
   top: {
     height: "50%",

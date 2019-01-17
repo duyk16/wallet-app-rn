@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
   container: {
     height: 85,
     flexDirection: 'row',
-    borderBottomWidth: 3,
-    borderBottomColor: "#f4f3f9",
+    ...Styles.BoxBorderBottom,
     paddingHorizontal: 10,
     paddingVertical: 15,
     backgroundColor: Styles.Colors.white,
