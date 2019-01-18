@@ -86,7 +86,8 @@ const AppNavigator = createBottomTabNavigator(
       style: {
         paddingTop: 5
       }
-    }
+    },
+    initialRouteName: 'SETTINGS',
   }
 )
 

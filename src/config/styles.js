@@ -29,6 +29,11 @@ export const ViewRow = {
   justifyContent: 'center',
   alignItems: 'center',
 }
+export const ViewTop = {
+  height: 1120,
+  zIndex: -10000,
+  backgroundColor: Colors.green,
+}
 export const BoxCenter = {
   justifyContent: 'center',
   alignItems: 'center',
@@ -40,7 +45,7 @@ export const BoxShadow = {
   shadowOpacity: 0.3,
 }
 export const BoxBorder = {
-  borderRadius: 4,
+  borderRadius: 7,
   borderWidth: 1,
   borderColor: '#ebebeb',
 }

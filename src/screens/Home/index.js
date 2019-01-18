@@ -42,7 +42,7 @@ export default class index extends Component {
           {this.state.isLogin && <UserServices />}
           <View style={{...Styles.BoxBorderBottom, backgroundColor: Styles.Colors.white}}>
             <Image 
-              source={require('./banner1.png')}
+              source={require('../../res/images/banner1.png')}
               style={{width: '100%', height: 125}}
               resizeMode='contain'
             />
