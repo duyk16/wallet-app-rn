@@ -12,7 +12,9 @@ export default class MainFeature extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.top}></View>
+        
         <View style={styles.bot}></View>
+
         <View style={styles.boxContainer}>
           <View style={styles.col}>
             <View style={styles.box}>
@@ -58,11 +60,13 @@ export default class MainFeature extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    height: 111,
+    height: 110,
     ...Styles.BoxBorderBottom,
+    top: -946
   },
   top: {
-    height: "50%",
+    height: 1000,
+    backgroundColor: Styles.Colors.green,
   },
   bot: {
     height: "50%",

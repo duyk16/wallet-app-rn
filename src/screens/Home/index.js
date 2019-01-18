@@ -3,8 +3,6 @@ import {
   Text, View, StyleSheet, ScrollView, StatusBar, Image
 } from 'react-native'
 
-// import Banner from '../../res/images/banner1.png'
-
 import Header from '../../components/Header/Home'
 import UserServices from '../../components/Services/UserServices';
 import * as Styles from '../../config/styles'
@@ -24,18 +22,19 @@ export default class index extends Component {
     }
     this.login = this.login.bind(this)
   }
-  
   login() {
     this.setState({
       isLogin: !this.state.isLogin
     })
   }
-
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: '#449D47'}}>
-        <StatusBar barStyle="light-content" />        
+      <View style={{flex: 1, backgroundColor: Styles.Colors.gray}}>
+        {/* Set status bar */}
+        <StatusBar barStyle="light-content" />     
+
         <Header isLogin={this.state.isLogin} />
+        {/* Show if user logged in */}
         {this.state.isLogin && <UserInfo />}
         <ScrollView showsVerticalScrollIndicator={false}>
           <MainFeature />

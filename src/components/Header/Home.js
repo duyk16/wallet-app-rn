@@ -42,14 +42,15 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   lineTop: {
     height: 25,
+    backgroundColor: Styles.Colors.green,
   },
   status: {
     flexDirection: 'row',
-    height: 30,
+    height: 35,
     alignItems: 'center',
     justifyContent: 'space-around',
     paddingHorizontal: 10,
-    marginBottom: 5,
+    backgroundColor: Styles.Colors.green,    
   },
   itemLeft: {
     justifyContent: 'flex-start',

@@ -8,46 +8,48 @@ import * as Styles from '../../config/styles'
 export default class UserInfo extends Component {
   render() {
     return (
-      <View style={styles.userInfo}>
-          <View style={styles.userBalance}>
-            <Text style={styles.balanceLabel}>
-              TK Ví
-            </Text>
-            <View style={Styles.ViewRow}>
-              <Text style={styles.balanceText}> 0 </Text>
-              <FontAwesome
-                name="diamond"
-                color={Styles.Colors.yellow}
-                size={12}
-              />
-            </View>
-          </View>
-
-          <View style={styles.userInfoCenter}>
-            <Text style={{textAlign: 'center', textAlignVertical: 'center'}}>
-            <FontAwesome 
-              name="user-circle-o"
-              color={Styles.Colors.white}
-              size={28}
-            /></Text>
-          </View>
-          
-          <View style={styles.userBalance}>
-            <Text style={styles.balanceLabel}>
-              TK Hoàn tiền
-            </Text>
-            <View style={Styles.ViewRow}>
-              <Text style={styles.balanceText}> 0 </Text>
-              <FontAwesome
-                name="diamond"
-                color={Styles.Colors.yellow}
-                size={12}
-              />
+      <View style={{backgroundColor: Styles.Colors.green}}>
+        <View style={styles.userInfo}>
+        
+            <View style={styles.userBalance}>
+              <Text style={styles.balanceLabel}>
+                TK Ví
+              </Text>
+              <View style={Styles.ViewRow}>
+                <Text style={styles.balanceText}> 0 </Text>
+                <FontAwesome
+                  name="diamond"
+                  color={Styles.Colors.yellow}
+                  size={12}
+                />
+              </View>
             </View>
 
-          </View>
+            <View style={styles.userInfoCenter}>
+              <Text style={{textAlign: 'center', textAlignVertical: 'center'}}>
+              <FontAwesome 
+                name="user-circle-o"
+                color={Styles.Colors.white}
+                size={28}
+              /></Text>
+            </View>
+            
+            <View style={styles.userBalance}>
+              <Text style={styles.balanceLabel}>
+                TK Hoàn tiền
+              </Text>
+              <View style={Styles.ViewRow}>
+                <Text style={styles.balanceText}> 0 </Text>
+                <FontAwesome
+                  name="diamond"
+                  color={Styles.Colors.yellow}
+                  size={12}
+                />
+              </View>
+            </View>
+
         </View>
-
+      </View>
     );
   }
 }
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: Styles.Colors.green2,
     height: 45,
-    borderRadius: 4,
+    borderRadius: 5,
     borderWidth: 1,
     borderColor: Styles.Colors.green2,
     marginBottom: 4,
