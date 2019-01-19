@@ -23,7 +23,7 @@ const AppNavigator = createBottomTabNavigator(
         tabBarLabel: 'Trang chủ',
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
           let name = focused ? "home" : "home-outline"
-          let color = focused ? Styles.Colors.green : 'gray'
+          let color = focused ? Styles.Colors.green : Styles.Colors.grayText
 
           return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
         }
@@ -35,7 +35,7 @@ const AppNavigator = createBottomTabNavigator(
         tabBarLabel: 'Khám phá',
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
           let name = focused ? "compass" : "compass-outline"
-          let color = focused ? Styles.Colors.green : 'gray'
+          let color = focused ? Styles.Colors.green : Styles.Colors.grayText
 
           return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
         }
@@ -47,7 +47,7 @@ const AppNavigator = createBottomTabNavigator(
         tabBarLabel: 'Tin tức',
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
           let name = focused ? "ios-paper" : "md-paper"
-          let color = focused ? Styles.Colors.green : 'gray'
+          let color = focused ? Styles.Colors.green : Styles.Colors.grayText
 
           return <Ionicons name={name} color={color} size={iconSize}/>
         }
@@ -59,7 +59,7 @@ const AppNavigator = createBottomTabNavigator(
         tabBarLabel: 'Thông báo',
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
           let name = focused ? "notifications" : "notifications-none"
-          let color = focused ? Styles.Colors.green : 'gray'
+          let color = focused ? Styles.Colors.green : Styles.Colors.grayText
           return <MaterialIcons name={name} color={color} size={iconSize}/>
         }
       })
@@ -70,7 +70,7 @@ const AppNavigator = createBottomTabNavigator(
         tabBarLabel: 'Cài đặt',
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
           let name = focused ? "settings" : "settings-outline"
-          let color = focused ? Styles.Colors.green : 'gray'
+          let color = focused ? Styles.Colors.green : Styles.Colors.grayText
           return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
         }
       })
@@ -79,7 +79,7 @@ const AppNavigator = createBottomTabNavigator(
   {
     tabBarOptions: {
       activeTintColor: Styles.Colors.green,
-      inactiveTintColor: 'gray',
+      inactiveTintColor: Styles.Colors.grayText,
       labelStyle: {
         fontSize: 11,
       },

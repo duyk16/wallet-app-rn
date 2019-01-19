@@ -13,15 +13,15 @@ export default class ListItem extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.icon}>
-          <AntDesign name="mobile1" color={Styles.Colors.gray} size={30} />
+          <AntDesign name={this.props.icon} color={Styles.Colors.grayText} size={20} />
         </View>
         <View style={styles.content}>
-          <View style={{width: 250}}>
-            <Text>Phiên bản</Text>
-            <Text>4.2.0 b410</Text>
+          <View>
+            <Text style={{...Styles.TextTitle, fontWeight: '500', lineHeight: 25}}> {this.props.title} </Text>
+            <Text style={{...Styles.TextNormal, color: 'gray'}}> {this.props.details} </Text>
           </View>
-          <View >
-            <Entypo name="chevron-thin-right" color={Styles.Colors.gray} size={30} />
+          <View style={{justifyContent: 'center'}}>
+            <Entypo name="chevron-thin-right" color={Styles.Colors.gray} size={20} />
           </View>
         </View>
       </View>
@@ -32,13 +32,19 @@ export default class ListItem extends Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    paddingVertical: 10,
+  },
+  icon: {
+    justifyContent: 'center',
   },
   content: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderBottomColor: Styles.Colors.gray,
     borderBottomWidth: 1,
-    marginLeft: 5,
-  }
+    marginLeft: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 5,
+  },
+  text: {}
 });

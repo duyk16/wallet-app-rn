@@ -11,7 +11,8 @@ import ListItem from './ListItem'
 export default class index extends Component {
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: Styles.Colors.gray}}>
+      <View style={{flex: 1, backgroundColor: Styles.Colors.grayBack}}>
+        <StatusBar barStyle="light-content" />
         <Header isLogin={true} />
         <View style={{top: -1000, zIndex: -1}}>
           <View style={Styles.ViewTop} />

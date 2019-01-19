@@ -2,6 +2,8 @@ export const Colors = {
   black: '#000000',
   white: '#ffffff',
   gray: '#ebebeb',
+  grayText: '#a1a1a1',
+  grayBack: '#f5f5f5',
   yellow: '#ffff00',
   pink: '#f72d53',
   violet: '#5752cf',
