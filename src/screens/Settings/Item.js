@@ -10,12 +10,17 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 
 export default class ListItem extends Component {
   render() {
+    const borderBot = this.props.last ? {} : {
+      borderBottomColor: Styles.Colors.gray,
+      borderBottomWidth: 1,
+    }
+    
     return (
       <View style={styles.container}>
         <View style={styles.icon}>
           <AntDesign name={this.props.icon} color={Styles.Colors.grayText} size={20} />
         </View>
-        <View style={styles.content}>
+        <View style={{ ...styles.content, ...borderBot }}>
           <View>
             <Text style={{...Styles.TextTitle, fontWeight: '500', lineHeight: 25}}> {this.props.title} </Text>
             <Text style={{...Styles.TextNormal, color: 'gray'}}> {this.props.details} </Text>
@@ -40,8 +45,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderBottomColor: Styles.Colors.gray,
-    borderBottomWidth: 1,
     marginLeft: 10,
     paddingVertical: 12,
     paddingHorizontal: 5,

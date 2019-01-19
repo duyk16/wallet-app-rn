@@ -16,7 +16,7 @@ export default class index extends Component {
         <Header isLogin={true} />
         <View style={{top: -1000, zIndex: -1}}>
           <View style={Styles.ViewTop} />
-          <ScrollView showsVerticalScrollIndicator={false} style={{top: -130, marginHorizontal: 15, paddingBottom: 20,}}>
+          <ScrollView showsVerticalScrollIndicator={false} style={{top: -130, paddingHorizontal: 15, paddingBottom: 20,}}>
             <Top />
             <ListItem />
           </ScrollView>

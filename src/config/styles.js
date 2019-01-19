@@ -41,10 +41,10 @@ export const BoxCenter = {
   alignItems: 'center',
 }
 export const BoxShadow = {
-  shadowColor: '#333',
+  shadowColor: Colors.grayText,
   shadowOffset: {width: 0, height: 0},
-  shadowRadius: 3,
-  shadowOpacity: 0.3,
+  shadowRadius: 5,
+  shadowOpacity: 0.5,
 }
 export const BoxBorder = {
   borderRadius: 7,

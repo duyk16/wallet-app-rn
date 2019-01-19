@@ -32,10 +32,11 @@ export default class Top extends Component {
 const styles = StyleSheet.create({
   box: {
     ...Styles.BoxBorder,
+    ...Styles.BoxShadow,
     backgroundColor: 'white',
     padding: 10,
     marginTop: 60,
-    marginBottom: 5,  
+    marginBottom: 8,  
   },
   container: {
     top: -40,
