@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { 
-  Text, View, StyleSheet, Image
+  Text, View, StyleSheet, TouchableOpacity
 } from 'react-native'
 
 import * as Styles from '../../config/styles'
@@ -15,20 +15,22 @@ export default class ListItem extends Component {
       borderBottomWidth: 1,
     }
     return (
-      <View style={styles.container}>
-        <View style={styles.icon}>
-          <AntDesign name={this.props.icon} color={Styles.Colors.grayText} size={20} />
-        </View>
-        <View style={{ ...styles.content, ...borderBot }}>
-          <View>
-            <Text style={{...Styles.TextTitle, fontWeight: '500', lineHeight: 25}}> {this.props.title} </Text>
-            <Text style={{...Styles.TextNormal, color: 'gray'}}> {this.props.details} </Text>
+      <TouchableOpacity activeOpacity={0.7} >
+        <View style={styles.container}>
+          <View style={styles.icon}>
+            <AntDesign name={this.props.icon} color={Styles.Colors.grayText} size={20} />
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Entypo name="chevron-thin-right" color={Styles.Colors.gray} size={20} />
+          <View style={{ ...styles.content, ...borderBot }}>
+            <View>
+              <Text style={{...Styles.TextTitle, fontWeight: '500', lineHeight: 25}}> {this.props.title} </Text>
+              <Text style={{...Styles.TextNormal, color: 'gray'}}> {this.props.details} </Text>
+            </View>
+            <View style={{justifyContent: 'center'}}>
+              <Entypo name="chevron-thin-right" color={Styles.Colors.gray} size={20} />
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

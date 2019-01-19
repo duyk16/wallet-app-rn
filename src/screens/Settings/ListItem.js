@@ -34,8 +34,7 @@ export default class ListItem extends Component {
     const { listItem1, listItem2 } = this.state
     const length2 = listItem2.length
     return (
-      <View style={styles.container}>
-
+      <View>
         <View  style={styles.box}>
           {listItem1.map((item, key) => (
             <Item icon={item.icon} 
@@ -62,9 +61,6 @@ export default class ListItem extends Component {
   }
 }
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 50,
-  },
   box: {
     ...Styles.BoxBorder,
     ...Styles.BoxShadow,
