@@ -9,10 +9,12 @@ import * as Styles from '../../config/styles'
 
 import UserInfo from './UserInfo'
 import MainFeature from './MainFeature'
-import CheckLogin from './CheckLogin';
-import EmtyBalance from './EmtyBalance';
-import Services from './Services';
+import CheckLogin from './CheckLogin'
+import EmtyBalance from './EmtyBalance'
+import Banner from './Banner'
+import Services from './Services'
 import Service from '../../components/Services/ServiceItem';
+import BuyCard from './BuyCard';
 
 export default class index extends Component {
   constructor(props, context) {
@@ -32,44 +34,22 @@ export default class index extends Component {
       <View style={{flex: 1, backgroundColor: Styles.Colors.gray}}>
         {/* Set status bar */}
         <StatusBar barStyle="light-content" />     
-
         <Header isLogin={this.state.isLogin} />
         {/* Show if user logged in */}
         {this.state.isLogin && <UserInfo />}
+        {/* Main View */}
         <ScrollView showsVerticalScrollIndicator={false}>
           <MainFeature />
-          {this.state.isLogin ? <EmtyBalance login={this.login}/> : <CheckLogin logout={this.login}/>}
+          {this.state.isLogin ? <EmtyBalance login={this.login}/> :
+                                <CheckLogin logout={this.login}/>}
           {this.state.isLogin && <UserServices />}
-          <View style={{...Styles.BoxBorderBottom, backgroundColor: Styles.Colors.white}}>
-            <Image 
-              source={require('../../res/images/banner1.png')}
-              style={{width: '100%', height: 125}}
-              resizeMode='contain'
-            />
-          </View>
-          
+          <Banner />
+          <BuyCard />
+
           <Services />
-          <View style={styles.container}>
-            <Text style={styles.welcome}> Welcome to React Native! </Text>
-          </View>
         </ScrollView>
+
       </View>
     )
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  bannerImage: {
-    width: '100%'
-  },
-});

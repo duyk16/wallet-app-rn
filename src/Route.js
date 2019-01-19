@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  createBottomTabNavigator, createAppContainer
+  createStackNavigator, createBottomTabNavigator, createAppContainer
 } from 'react-navigation'
 
 import * as Styles from './config/styles'
@@ -15,6 +15,79 @@ import Notification from './screens/Notification'
 import Settings from './screens/Settings'
 
 const iconSize = 25
+
+// const HomeStack = createStackNavigator({Home})
+// HomeStack.navigationOptions = {
+//   tabBarLabel: 'Trang chủ',
+//   tabBarIcon: ({ focused, horizontal, tintColor }) => {
+//     let name = focused ? "home" : "home-outline"
+//     let color = focused ? Styles.Colors.green : Styles.Colors.grayText
+
+//     return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
+//   }
+// }
+
+// const ExplorerStack = createStackNavigator({Explorer})
+// ExplorerStack.navigationOptions = {
+//   tabBarLabel: 'Khám phá',
+//   tabBarIcon: ({ focused, horizontal, tintColor }) => {
+//     let name = focused ? "compass" : "compass-outline"
+//     let color = focused ? Styles.Colors.green : Styles.Colors.grayText
+
+//     return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
+//   }
+// }
+
+// const NewsStack = createStackNavigator({News})
+// NewsStack.navigationOptions = {
+//   tabBarLabel: 'Tin tức',
+//   tabBarIcon: ({ focused, horizontal, tintColor }) => {
+//     let name = focused ? "ios-paper" : "md-paper"
+//     let color = focused ? Styles.Colors.green : Styles.Colors.grayText
+
+//     return <Ionicons name={name} color={color} size={iconSize}/>
+//   }
+// }
+
+// const NotificationStack = createStackNavigator({Notification})
+// NotificationStack.navigationOptions = {
+//   tabBarLabel: 'Cài đặt',
+//   tabBarIcon: ({ focused, horizontal, tintColor }) => {
+//     let name = focused ? "settings" : "settings-outline"
+//     let color = focused ? Styles.Colors.green : Styles.Colors.grayText
+//     return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
+//   }
+// }
+
+// const SettingsStack = createStackNavigator({Settings})
+// SettingsStack.navigationOptions = {
+//   tabBarLabel: 'Cài đặt',
+//   tabBarIcon: ({ focused, horizontal, tintColor }) => {
+//     let name = focused ? "settings" : "settings-outline"
+//     let color = focused ? Styles.Colors.green : Styles.Colors.grayText
+//     return <MaterialCommunityIcons name={name} color={color} size={iconSize}/>
+//   }
+// }
+
+// const TestNavigator = createBottomTabNavigator(
+//   { 
+//     HomeStack, ExplorerStack, NewsStack, NotificationStack, SettingsStack
+//   },
+//   {
+//     tabBarOptions: {
+//       activeTintColor: Styles.Colors.green,
+//       inactiveTintColor: Styles.Colors.grayText,
+//       labelStyle: {
+//         fontSize: 11,
+//       },
+//       style: {
+//         paddingTop: 5
+//       }
+//     },
+//     initialRouteName: 'SettingsStack',
+//   }
+// )
+
 const AppNavigator = createBottomTabNavigator(
   {
     HOME: { 
@@ -87,7 +160,7 @@ const AppNavigator = createBottomTabNavigator(
         paddingTop: 5
       }
     },
-    initialRouteName: 'SETTINGS',
+    initialRouteName: 'HOME',
   }
 )
 

@@ -12,8 +12,7 @@ export default class UserServices extends Component {
   render() {
     return (
       <View style={stylesMain.container}>
-        <ScrollView 
-          horizontal={true}
+        <ScrollView horizontal
           showsHorizontalScrollIndicator={false}
         >
           <Service 
