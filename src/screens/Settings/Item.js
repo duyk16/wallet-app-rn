@@ -14,7 +14,6 @@ export default class ListItem extends Component {
       borderBottomColor: Styles.Colors.gray,
       borderBottomWidth: 1,
     }
-    
     return (
       <View style={styles.container}>
         <View style={styles.icon}>

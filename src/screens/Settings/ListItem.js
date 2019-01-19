@@ -10,6 +10,15 @@ export default class ListItem extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
+      listItem1: [
+        {icon: 'qrcode', title: 'Mã QR của tôi', details: '4.2.0 b410'},
+        {icon: 'solution1', title: 'Tài khoản', details: 'Hồ sơ cá nhân'},
+        {icon: 'form', title: 'Báo danh game', details: 'Checkin offline game'},
+        {icon: 'lock1', title: 'Cài đặt bảo mật', details: 'Tăng cường độ an toàn cho tài khoản'},
+        {icon: 'clockcircleo', title: 'Lịch sử', details: 'Chi tiết lịch sử giao dịch'},
+        {icon: 'setting', title: 'Cài đặt', details: 'Tùy chỉnh ứng dụng'},
+
+      ],
       listItem2: [
         {icon: 'mobile1', title: 'Phiên bản', details: '4.2.0 b410'},
         {icon: 'dribbble', title: 'Giới thiệu ví Appota', details: 'Ứng dụng giải trí miễn phí'},
@@ -22,29 +31,46 @@ export default class ListItem extends Component {
   }
 
   render() {
-    const { listItem2 } = this.state
+    const { listItem1, listItem2 } = this.state
     const length2 = listItem2.length
     return (
-      <View style={styles.box}>
-        {listItem2.map((item, key) => (
-          <Item icon={item.icon} 
-            title={item.title} 
-            details={item.details} 
-            key={key} 
-            last={length2 - 1 === key}
-          />
-        ))}
+      <View style={styles.container}>
+
+        <View  style={styles.box}>
+          {listItem1.map((item, key) => (
+            <Item icon={item.icon} 
+              title={item.title} 
+              details={item.details} 
+              key={key} 
+              last={length2 - 1 === key}
+            />
+          ))}
+        </View>
+        <View style={styles.box}>
+          {listItem2.map((item, key) => (
+            <Item icon={item.icon} 
+              title={item.title} 
+              details={item.details} 
+              key={key} 
+              last={length2 - 1 === key}
+            />
+          ))}
+        </View>
       </View>
+
     )
   }
 }
 const styles = StyleSheet.create({
+  container: {
+    marginBottom: 50,
+  },
   box: {
     ...Styles.BoxBorder,
     ...Styles.BoxShadow,
     backgroundColor: 'white',
     paddingHorizontal: 15,
     paddingVertical: 10,
-    marginBottom: 70,
+    marginBottom: 10,
   }
 });
